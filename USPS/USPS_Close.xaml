@@ -60,6 +60,6 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Closing USPS in browser&quot;]" />
-    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe ZIP'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="019096d398b5d8c585ee031001f4d5e9" Selector="&lt;html app='msedge.exe' title='ZIP Code™ Lookup | USPS' /&gt;" WaitForReady="INTERACTIVE" />
+    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe ZIP'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="019096d398b5d8c585ee031001f4d5e9" Selector="&lt;html app='msedge.exe' title='* USPS' /&gt;" WaitForReady="INTERACTIVE" />
   </Sequence>
 </Activity>
