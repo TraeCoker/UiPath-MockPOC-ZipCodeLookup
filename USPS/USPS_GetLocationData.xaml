@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1290.4,2652</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1290.4,2552</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>USPS_GetLocationData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -83,7 +83,7 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Retrieves location data pertaining to search &#xD;&#xA;&#xD;&#xA;Pre-condition: Zip code search was successful and data exists&#xD;&#xA;&#xD;&#xA;Post-action: Location data retrieved and consolidated into data table&#xD;&#xA;" DisplayName="USPS Get Location Data" sap:VirtualizedContainerService.HintSize="1300.8,2587.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Retrieves location data pertaining to search &#xD;&#xA;&#xD;&#xA;Pre-condition: Zip code search was successful and data exists&#xD;&#xA;&#xD;&#xA;Post-action: Location data retrieved and consolidated into data table&#xD;&#xA;" DisplayName="USPS Get Location Data" sap:VirtualizedContainerService.HintSize="1300.8,2487.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="RecommendedName" />
       <Variable x:TypeArguments="x:String" Name="OtherNames" />
@@ -100,13 +100,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1259.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Retrieving location data&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser USPS Zip Code Lookup on Edge" sap:VirtualizedContainerService.HintSize="1259.2,1925.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="019096d398b5d8c585ee031001f4d5e9" Selector="&lt;html app='msedge.exe' title='* USPS' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser USPS Zip Code Lookup on Edge" sap:VirtualizedContainerService.HintSize="1259.2,1825.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="019096d398b5d8c585ee031001f4d5e9" Selector="&lt;html app='msedge.exe' title='* USPS' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1225.6,1778.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1225.6,1678.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="OtherNamesExist" />
               <Variable x:TypeArguments="x:Boolean" Name="InvalidZipCode" />
@@ -129,9 +129,9 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[ZipCodeIsValid]" sap:VirtualizedContainerService.HintSize="1184,1538.4" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[ZipCodeIsValid]" sap:VirtualizedContainerService.HintSize="1184,1438.4" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="764.8,1379.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap:VirtualizedContainerService.HintSize="764.8,1279.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -164,9 +164,9 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[OtherNamesExist]" sap:VirtualizedContainerService.HintSize="723.2,459.2" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[OtherNamesExist]" sap:VirtualizedContainerService.HintSize="723.2,359.2" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="375.2,300" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,14 +187,6 @@
                             <OutArgument x:TypeArguments="x:String">[OtherNames]</OutArgument>
                           </ui:GetValue.Value>
                         </ui:GetValue>
-                        <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_8">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[OtherNames]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">[OtherNames.split(" "c).last]</InArgument>
-                          </Assign.Value>
-                        </Assign>
                       </Sequence>
                     </If.Then>
                     <If.Else>
