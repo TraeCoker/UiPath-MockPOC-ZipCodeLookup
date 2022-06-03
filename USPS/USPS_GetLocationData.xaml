@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2098.4,3410.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1519.2,3410.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>USPS_GetLocationData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -83,7 +83,7 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Retrieves location data pertaining to search &#xD;&#xA;&#xD;&#xA;Pre-condition: Zip code search was successful and data exists&#xD;&#xA;&#xD;&#xA;Post-action: Location data retrieved and consolidated into data table&#xD;&#xA;" DisplayName="USPS Get Location Data" sap:VirtualizedContainerService.HintSize="2108.8,3345.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Retrieves location data pertaining to search &#xD;&#xA;&#xD;&#xA;Pre-condition: Zip code search was successful and data exists&#xD;&#xA;&#xD;&#xA;Post-action: Location data retrieved and consolidated into data table&#xD;&#xA;" DisplayName="USPS Get Location Data" sap:VirtualizedContainerService.HintSize="1529.6,3345.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="RecommendedName" />
       <Variable x:TypeArguments="x:String" Name="OtherNames" />
@@ -99,14 +99,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2067.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Retrieving location data&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser USPS Zip Code Lookup on Edge" sap:VirtualizedContainerService.HintSize="2067.2,2684" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="019096d398b5d8c585ee031001f4d5e9" Selector="&lt;html app='msedge.exe' title='* USPS' /&gt;">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1488,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Retrieving location data&quot;]" />
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser USPS Zip Code Lookup on Edge" sap:VirtualizedContainerService.HintSize="1488,2684" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="019096d398b5d8c585ee031001f4d5e9" Selector="&lt;html app='msedge.exe' title='* USPS' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2033.6,2536.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1454.4,2536.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="OtherNamesExist" />
               <Variable x:TypeArguments="x:Boolean" Name="InvalidZipCode" />
@@ -117,24 +117,24 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[ZipCodeIsValid]" sap:VirtualizedContainerService.HintSize="1992,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+            <ui:UiElementExists DisplayName="Element Exists -  Name of City" Exists="[ZipCodeIsValid]" sap:VirtualizedContainerService.HintSize="1412.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bded840f-45f6-4e2b-a7ab-cbecf7c7d545" InformativeScreenshot="89b49f766991af5751162a67326b4d97" Selector="&lt;webctrl parentid='cityByZipDiv' tag='P' aaname='RECOMMENDED CITY NAME' /&gt;" TimeoutMS="300">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bded840f-45f6-4e2b-a7ab-cbecf7c7d545" InformativeScreenshot="af0cb6419bcefdcc4cfa372e926118f4" Selector="&lt;webctrl parentid='cityByZipDiv' tag='P' aaname='RECOMMENDED CITY NAME' /&gt;" TimeoutMS="300">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[ZipCodeIsValid]" sap:VirtualizedContainerService.HintSize="1992,2296.8" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[ZipCodeIsValid]" sap:VirtualizedContainerService.HintSize="1412.8,2296.8" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="1572.8,2137.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap:VirtualizedContainerService.HintSize="993.6,2137.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Recommended City Name" sap:VirtualizedContainerService.HintSize="1531.2,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Recommended City Name" sap:VirtualizedContainerService.HintSize="952,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
                     <ui:GetValue.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aee5d434-06f8-4fa3-a502-acf84937ceee" InformativeScreenshot="2909d624befc84287489fe3dd6b287ca" Selector="&lt;webctrl parentid='cityByZipDiv' tag='P' /&gt;&lt;nav up='1' /&gt;&lt;webctrl parentid='cityByZipDiv' tag='P' class='row-detail-wrapper' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -149,7 +149,7 @@
                       <OutArgument x:TypeArguments="x:String">[RecommendedName]</OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
-                  <ui:UiElementExists DisplayName="Element Exists Other City Names" Exists="[OtherNamesExist]" sap:VirtualizedContainerService.HintSize="1531.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists DisplayName="Element Exists Other City Names" Exists="[OtherNamesExist]" sap:VirtualizedContainerService.HintSize="952,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5bcc8433-cebe-49c6-b327-f78e8876b8c4" InformativeScreenshot="a2c5373d95800f6850f11305292567cc" Selector="&lt;webctrl parentid='cityByZipDiv' tag='P' aaname='OTHER CITY NAMES RECOGNIZED FOR ADDRESSES IN THIS ZIP CODE' /&gt;&lt;nav up='1' /&gt;&lt;webctrl parentid='cityByZipDiv' tag='P' class='row-detail-wrapper' /&gt;" TimeoutMS="300">
                         <ui:Target.WaitForReady>
@@ -158,9 +158,9 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <If Condition="[OtherNamesExist]" sap:VirtualizedContainerService.HintSize="1531.2,1217.6" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[OtherNamesExist]" sap:VirtualizedContainerService.HintSize="952,1217.6" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="1183.2,1058.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence sap:VirtualizedContainerService.HintSize="604,1058.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="OtherNamesChildren" />
                           <Variable x:TypeArguments="scg:List(x:String)" Name="OtherNamesList" />
@@ -170,7 +170,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:FindChildren Children="[OtherNamesChildren]" DisplayName="Find Children 'DIV'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="1141.6,107.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
+                        <ui:FindChildren Children="[OtherNamesChildren]" DisplayName="Find Children - Retrieve All Other Citites" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="562.4,107.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
                           <ui:FindChildren.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="93d4658b-f0f2-4553-a4a9-5a75a9797d66" InformativeScreenshot="be7f97882053e8c0f535f1963ea179fa" Selector="&lt;webctrl idx='2' parentid='cityByZipDiv' tag='DIV' /&gt;">
                               <ui:Target.TimeoutMS>
@@ -182,7 +182,7 @@
                             </ui:Target>
                           </ui:FindChildren.Target>
                         </ui:FindChildren>
-                        <Assign sap:VirtualizedContainerService.HintSize="1141.6,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <Assign DisplayName="Assign - Instantiate New List For Other Names" sap:VirtualizedContainerService.HintSize="562.4,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                           <Assign.To>
                             <OutArgument x:TypeArguments="scg:List(x:String)">[OtherNamesList]</OutArgument>
                           </Assign.To>
@@ -190,13 +190,13 @@
                             <InArgument x:TypeArguments="scg:List(x:String)">[new List(of String)]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1141.6,618.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[OtherNamesChildren]">
+                        <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562.4,618.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[OtherNamesChildren]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="ui:UiElement">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="ui:UiElement" Name="child" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1106.4,493.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="527.2,493.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="ChildText" />
                                 </Sequence.Variables>
@@ -205,7 +205,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="1064.8,86.4" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text - Retrieve City Name to ChildText Variable" sap:VirtualizedContainerService.HintSize="485.6,86.4" sap2010:WorkflowViewState.IdRef="GetValue_4">
                                   <ui:GetValue.Target>
                                     <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[child]" Id="b4e7d950-d946-4216-b7d6-c84448b9cda2">
                                       <ui:Target.TimeoutMS>
@@ -220,9 +220,9 @@
                                     <OutArgument x:TypeArguments="x:String">[ChildText]</OutArgument>
                                   </ui:GetValue.Value>
                                 </ui:GetValue>
-                                <If Condition="[ChildText.Contains(&quot;ZIP CODE&quot;)]" sap:VirtualizedContainerService.HintSize="1064.8,274.4" sap2010:WorkflowViewState.IdRef="If_3">
+                                <If Condition="[ChildText.Contains(&quot;ZIP CODE&quot;)]" sap:VirtualizedContainerService.HintSize="485.6,274.4" sap2010:WorkflowViewState.IdRef="If_3">
                                   <If.Then>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="510.4,84.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                    <Sequence DisplayName="Child is not a city" sap:VirtualizedContainerService.HintSize="200,84.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -231,13 +231,13 @@
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="510.4,115.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <Sequence DisplayName="Child is a City - Add to Collection" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <AddToCollection x:TypeArguments="x:String" Collection="[OtherNamesList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="468.8,22.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[ChildText.Substring(0, ChildText.Length - 3)]" />
+                                      <AddToCollection x:TypeArguments="x:String" Collection="[OtherNamesList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[ChildText.Substring(0, ChildText.Length - 3)]" />
                                     </Sequence>
                                   </If.Else>
                                 </If>
@@ -245,7 +245,7 @@
                             </ActivityAction>
                           </ui:ForEach.Body>
                         </ui:ForEach>
-                        <Assign sap:VirtualizedContainerService.HintSize="1141.6,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                        <Assign DisplayName="Assign Joined List of Names to OtherNames" sap:VirtualizedContainerService.HintSize="562.4,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[OtherNames]</OutArgument>
                           </Assign.To>
@@ -273,7 +273,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <Assign sap:VirtualizedContainerService.HintSize="1531.2,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign DisplayName="Assign State Name" sap:VirtualizedContainerService.HintSize="952,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[State]</OutArgument>
                     </Assign.To>
@@ -281,7 +281,7 @@
                       <InArgument x:TypeArguments="x:String">[RecommendedName.split(" "c).last]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="1531.2,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign DisplayName="Assign City Name" sap:VirtualizedContainerService.HintSize="952,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[City]</OutArgument>
                     </Assign.To>
@@ -289,7 +289,7 @@
                       <InArgument x:TypeArguments="x:String">[RecommendedName.substring(0, RecommendedName.length - 3)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="1531.2,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign DisplayName="Assign 'City, State, Zip'" sap:VirtualizedContainerService.HintSize="952,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[CityStateZip]</OutArgument>
                     </Assign.To>
@@ -297,7 +297,7 @@
                       <InArgument x:TypeArguments="x:String">[City + ", " + State + ", " + in_ZipCode]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="1531.2,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign DisplayName="Assign Status as 'Success'" sap:VirtualizedContainerService.HintSize="952,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Status]</OutArgument>
                     </Assign.To>
@@ -305,7 +305,7 @@
                       <InArgument x:TypeArguments="x:String">Success</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1531.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Location data retrieval successful&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Location data retrieval successful&quot;]" />
                 </Sequence>
               </If.Then>
               <If.Else>
@@ -331,7 +331,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <ui:BuildDataTable DataTable="[out_dt_LocationData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="2067.2,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Zip_x0020_Code&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;City&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;State&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;City_x002C__x0020__x0020_State_x002C__x0020_Zip&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Other_x0020_City_x0020_Names&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_ZipCode, City, State, CityStateZip, OtherNames, Status}]" DataTable="[out_dt_LocationData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="2067.2,188" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+    <ui:BuildDataTable DataTable="[out_dt_LocationData]" DisplayName="Build Data Table - out_dt_LocationData" sap:VirtualizedContainerService.HintSize="1488,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Zip_x0020_Code&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;City&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;State&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;City_x002C__x0020__x0020_State_x002C__x0020_Zip&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Other_x0020_City_x0020_Names&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_ZipCode, City, State, CityStateZip, OtherNames, Status}]" DataTable="[out_dt_LocationData]" DisplayName="Add Data Row - Consolidate Location Data into Single Row" sap:VirtualizedContainerService.HintSize="1488,188" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
   </Sequence>
 </Activity>
